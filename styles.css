@@ -1,0 +1,29 @@
+:root{
+  --bg:#0b0d10;
+  --card:#0f1418;
+  --accent:#00b3ff;
+  --muted:#98a0a6;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:linear-gradient(180deg,#050607 0%,var(--bg) 100%);color:#e6eef3;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif}
+.site-header{display:flex;flex-direction:column;gap:14px;padding:22px;max-width:1100px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:52px;height:52px;border-radius:8px;background:linear-gradient(135deg,#071426,#06283a);display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:18px;box-shadow:0 6px 20px rgba(0,0,0,0.6)}
+.site-header h1{font-size:18px;color:#dfe9ef}
+.tabs{display:flex;gap:10px;flex-wrap:wrap}
+.tab{background:transparent;border:1px solid transparent;padding:10px 14px;border-radius:8px;color:var(--muted);cursor:pointer;transition:all .18s;text-decoration:none}
+.tab:hover{color:#fff;border-color:rgba(255,255,255,0.05);transform:translateY(-2px)}
+.tab.active{background:linear-gradient(90deg, rgba(0,179,255,0.08), rgba(0,179,255,0.03));border:1px solid rgba(0,179,255,0.18);color:var(--accent);box-shadow:0 4px 18px rgba(0,179,255,0.06)}
+.tab.external{display:inline-flex;align-items:center}
+main{max-width:1100px;margin:20px auto;padding:18px;display:grid;grid-template-columns:1fr;gap:18px}
+.panel{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 30px rgba(2,6,12,0.6);border:1px solid rgba(255,255,255,0.02)}
+.panel h2{color:#eaf7ff;margin-bottom:10px}
+.panel p{color:var(--muted);line-height:1.6;margin-bottom:12px}
+.panel img{width:100%;max-height:340px;object-fit:cover;border-radius:8px;border:1px solid rgba(255,255,255,0.03)}
+.site-footer{max-width:1100px;margin:18px auto;padding:12px;color:var(--muted);text-align:center;font-size:13px}
+@media(min-width:800px){
+  main{grid-template-columns:1fr 320px}
+  .panel{grid-column:1}
+  #divisions, #lectures, #statute, #about{min-height:260px}
+}
